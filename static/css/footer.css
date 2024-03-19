@@ -1,0 +1,28 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    background: #b9eb74;
+    height: 25vh;
+    
+}
+
+.footer_names {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 700px;
+    align-items: center;
+    height: 100%; /* Asegura que .footer_names ocupe el 100% de la altura disponible */
+}
+
+.names_li{
+    display: flex;
+    text-decoration: none;
+    margin: 5px;
+
+}

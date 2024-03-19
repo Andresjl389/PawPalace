@@ -1,0 +1,41 @@
+{% extends "layouts/base2.html" %}
+
+{% load static %}
+
+{% block title %}Recetas{% endblock %}
+
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/receta.css' %}">
+
+    <div class="container">
+        <div class="container_texto">
+            <p class="texto">Ingrese los ingredientes de las recetas</p>
+            <form class="search" method="POST">
+                {% csrf_token %}
+                <input type="text" placeholder="Escriba aquí el ingrediente" class="input_receta" name="receta">
+                <button type="submit" class="send"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <h2 class="h2_busqueda">{{busqueda}}</h2>
+
+        </div>
+            <div class="article_container">
+                <article class="article">
+                    {% for r in r_recetas %}
+                    <div class="receta_container">
+                        <a href="{% url 'Rece_Info' r.Nombre_receta %}"><div class="receta" id="ir_receta"><img src="{{r.imageproj.url}}" class="Rec_img"> </div></a>
+                        <h2>{{r.Nombre_receta}}</h2>
+                        <p>{{r.Descripcion|slice:":200"}}...</p>
+                    </div>
+                    {% endfor %}
+                </article>
+            </div>
+    </div>
+
+
+{% endblock %}
+
+{% block styles %}
+{% endblock %}

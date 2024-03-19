@@ -1,0 +1,48 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
+
+<header class="header">
+
+    <div class="options_container">
+        <i class="fa-solid fa-list" id="menu-icon"></i>
+        <diV class="options">
+            <ul class="list">
+                <li class="list_li"><a class="a_header" href="{% url 'recetas' %}">Recetas</a></li>
+                <li class="list_li"><a class="a_header" href="{% url 'productos' %}" >Productos de temporada</a></li>
+                <li class="list_li"><a class="a_header" href="#">Educación</a></li>
+                <li class="list_li"><a class="a_header" href="{% url 'comenComunidad' %}">Comunidad</a></li>
+
+                {% if user.is_superuser %}
+                <li class="list_li"><a class="a_header" href="{% url 'libros' %}">Suscripción</a></li>
+                <li class="list_li"><a class="a_header" href="/adm_recetas">Gestión Recetas</a></li>
+
+                {% else %}
+                <li class="list_li"><a class="a_header" href="{% url 'suscripcion' %}">Suscripción</a></li>
+                {% endif %}
+            </ul>
+        </diV>
+
+    </div>
+
+    <div class="button_home_container">
+        <button type="button" class="home_button">
+            {% if user.is_superuser %}
+                <a href="{% url 'perfil_administrativo' %}" class=""><img src="{% static 'img/logolocalfood.png' %}"></a>
+            {% else %}
+                <a href="{% url 'inicio' %}" class=""><img src="{% static 'img/logolocalfood.png' %}"></a>
+            {% endif %}
+        </button>
+    </div>
+    <form method="POST">
+        {% csrf_token %}
+    <div class="nav_conatiner">
+        <nav class="nav_bar">
+                <input type="text" class="input_nav_bar" placeholder="Buscar" name="buscar">
+                <button class="btn_search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </nav>
+        </div>
+    </form>
+    <div class="container_space"></div>
+    
+</header>
+<script src="{% static 'js/inicio.js' %}" type="text/javascript"></script>

@@ -1,0 +1,28 @@
+{% extends "layouts/base2.html" %}
+
+{% load static %}
+
+{% block title %}Recetas{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/info_recetas.css' %}">
+
+<div class="div_info">
+    <div class="img_container">
+        <img src="{{receta.imageproj.url}}" class="img_info">
+    </div>
+    <div class="info_container">
+        <div>
+            <h2>Preparación</h2>
+            {{receta.Descripcion}}
+        </div>
+        <div>
+            <h2>Ingredientes</h2>
+            {{receta.Ingredientes}}
+        </div>
+    </div>
+</div>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+{% endblock %}

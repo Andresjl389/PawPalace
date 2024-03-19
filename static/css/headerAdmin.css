@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    
+  }
+.header{
+    display: flex;
+    align-content: center;
+    background: #C5E892;
+    
+}
+
+.options_container{
+    font-size: 30px;
+    margin: 10px;
+    flex: 1;
+    width: 100px;
+}
+
+.options_container i:hover{
+    cursor: pointer;
+}
+
+.options_container i{
+    margin-left: 50px;
+    margin-top: 12px;
+}
+
+.option{
+    display: none;
+}
+
+.options.active{
+    display: flex;
+    border-radius: 15px;
+}
+
+.list{
+    display: none;
+    position: absolute;
+    z-index: 10;
+}
+
+
+.list.active{
+    background: #fffdfd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    list-style-type: none;
+    width: 25vw;
+    height: 30vh;
+    box-shadow: 0px 10px 10px 0px #414141;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 10;
+}
+
+.nav_conatiner{
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    flex: 1;
+    margin-left: 24px;
+}
+
+.nav_bar{
+    margin: 10px;
+    background: #545F7190;
+    width: 40vw;
+    border-radius: 30px;
+    display: flex;
+}
+
+.input_nav_bar{
+    background: transparent;
+    color: #252525;
+    outline: none;
+    border: none;
+    height: 100%;
+    padding: 10px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    flex: 7;
+    font-size: 20px;
+}
+
+.input_nav_bar::placeholder{
+    color: #C5E892;
+}
+
+
+.input_nav_bar:focus{
+    border: 1px solid #252525
+}
+
+.btn_search{
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    background: #545F71a0;
+    outline: none;
+    border: none;
+    height: 100%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-size: 20px;
+    flex: 1;
+}
+
+.btn_search:hover{
+    color: #C5E892;
+    cursor: pointer;
+}
+
+
+.home_button{
+    background: transparent;
+    border: none;
+    width: 300px; 
+    height: 70px; 
+   
+}
+
+img{
+    position: center;
+    width: 170px;
+    display: flex;
+    margin-left: 5px;
+}
+
+.container_space{
+    width: 820px;
+}
+

@@ -1,0 +1,27 @@
+{% extends "layouts/base2.html" %}
+
+{% load static %}
+
+
+{% block title %}LocalFood{% endblock %}
+
+{% block content %}
+<body>
+<link type="text/css" href="{% static 'css/padministrativo.css' %}" rel="stylesheet">
+<div class="all">
+    <a href="{% url 'adm_recetas' %}" class="a_cards">
+        <div class="div_cards" >
+            <h2>RECETAS</h2>
+            <i class="fa-solid fa-utensils"></i>
+        </div>
+    </a>
+    <a href="{% url 'PQRS' %}" class="a_cards">
+        <div class="div_cards" >
+            <h2>PQRS</h2>
+            <i class="fa-regular fa-comment"></i>
+        </div>
+    </a>
+</div>
+</body>
+<script type = "text/javascript" src="{% static 'js/inicio.js' %}"></script>
+{% endblock %}

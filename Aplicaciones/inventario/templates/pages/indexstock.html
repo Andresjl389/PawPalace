@@ -1,0 +1,57 @@
+{% extends "layouts/base.html" %} 
+{% load static %} 
+{% block title%}indexstock{% endblock %}
+{% block content %}
+<!-- CSS de Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+<link rel="stylesheet" href="{% static 'css/indexstock.css' %}" />
+
+<body class="body">
+
+  <div class="container">
+    <div class="card margen-color mt-4 " >
+      <div class="Table_Stock">
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Titulo</th>
+              <th>Imagen</th>
+              <th>Cantidad</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            {%for inventario in busqueda_libros%}
+            <tr>
+              <td>{{inventario.id}}</td>
+              <td>{{inventario.titulo}}</td>
+              <td>
+                <img src="{{inventario.imagen.url}}" height="100" class="img-fluid"/>
+              </td>
+              <td> {{inventario.descripcion}}</td>
+              <td> 
+                <a name="" id="" class="btn btn-info" href="{%url 'editar_libros' inventario.id%}" role="">Editar</a> 
+                |
+                <a name="" id="" class="btn btn-danger" href="{%url 'eliminar_libros' inventario.id%}" role="">Borrar</a>
+              </td>
+            </tr>
+            {%endfor%}
+          </tbody>
+        </table>
+        <div class="text-center">
+          <a class="btn btn-success w-25 mt-3" href="{% url 'crear_libros' %}">Agregar Nuevo Producto</a>
+        </div>
+    </div>
+  </div>  
+  
+</body>
+
+<!-- JS de Bootstrap (si es necesario) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+{% endblock %}

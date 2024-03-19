@@ -1,0 +1,35 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/headerAdmin.css' %}">
+
+<header class="header">
+
+    
+    <div class="options_container">
+        <i class="fa-solid fa-list" id="menu-icon"></i>
+        <div class="options">
+            <ul class="list">
+                <li class="list_li"><a href="">Gestion de Usuarios</a></li>
+                <li class="list_li"><a href="" target="_blank">Gestion de Contenido</a></li>
+                <li class="list_li"><a href="">Configuracion </a></li>
+                <li class="list_li"><a href="">Gestion PQRS</a></li>
+                <li class="list_li"><a href="">Seguridad y privacidad</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="button_home_container">
+        <button type="button" class="home_button">
+            <a href="{% url 'inicio' %}" class=""><img src="{% static 'img/logolocalfood.png' %}"></a>
+        </button>
+    </div>
+    <div class="nav_conatiner">
+        <nav class="nav_bar">
+            <input type="text" class="input_nav_bar" placeholder="Buscar">
+            <button class="btn_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </nav>
+    </div>
+    <div class="container_space"></div>
+    
+</header>
+<script type = "text/javascript" src="{% static 'js/inicio.js' %}"></script>

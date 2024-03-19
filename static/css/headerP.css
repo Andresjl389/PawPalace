@@ -1,0 +1,23 @@
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    padding:2% 2% 0% 2%;
+    font-size: 25px;
+}
+
+.icons{
+    cursor: pointer;
+}
+.icons:hover{
+    color: #b10f0f;
+}
+.icons:active{
+    color: #770b0b;
+}

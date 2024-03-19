@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://kit.fontawesome.com/5e42422cfe.js" crossorigin="anonymous"></script>
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <header>
+        {% include "includes/header2.html" %}
+    </header>
+    <section>
+        {% block content %} {% endblock %}
+        
+    </section>
+    <footer>
+        {% include "includes/footer.html" %}
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+.container{
+    margin: 0;
+    padding: 0;
+    background: #C5E892;
+}
+
+.article_container{
+    display: flex;
+    justify-content: center;
+}
+
+.container_texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+    text-align: center;
+    flex-direction: column;
+}
+
+.search{
+    display: flex;
+    margin-top: 10px;
+    width: 30%;
+    height: 5vh;
+}
+
+.input_receta{
+    color: #252525;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+    flex: 1;
+    font-size: 18px;
+}
+
+.input_receta:focus{
+    border-bottom: 2px solid #d552fd;
+}
+
+.send{
+    background: #FFFFFF;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 20px;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 3vw;
+}
+
+.send i:active{
+    color: #7D7D7D;
+}
+
+.texto{
+    text-align: center;
+}
+
+.article{
+    width: 50vw;
+    margin: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.receta_container{
+    text-align: center;
+}
+
+.receta{
+    flex: 1;
+    height: 200px;
+    background: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.Rec_img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 4px solid #000000;
+}

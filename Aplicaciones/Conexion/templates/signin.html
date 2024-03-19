@@ -1,0 +1,31 @@
+{% extends "layouts/baseAuth.html" %}
+{% load static %}
+{% block title %} signin {% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/signin.css' %}">
+
+<body>
+    <div class="container">
+        <form class="form_container"  method="POST">
+            {% csrf_token %}
+            <h3 class="title_error">
+                {{ error }}
+            </h3>
+            <p class="name">Usuario</p>
+            <input type="text" class="inputs" placeholder="Nombre de usuario" required="" name="User">
+            <p class="name">Email</p>
+            <input type="email" class="inputs" placeholder="youremailhere@mail.com" required="" name="email">
+            <p class="name">Contraseña</p>
+            <input type="password" class="inputs" placeholder="password" required="" name="password1">
+            <p class="name">Confirmar contraseña</p>
+            <input type="password" class="inputs" placeholder="confirm password" required="" name="password2">
+            <button type="submit" class="send" id="registro"><i class="fa-solid fa-circle-plus icon"></i>Ingresar</button>
+        </form>
+    </div>
+</body>
+
+
+<script type="text/javascript" src="{% static 'js/principal' %}"></script>
+{% endblock %}

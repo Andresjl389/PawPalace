@@ -1,0 +1,44 @@
+.pqrs{
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #e8f6d1;
+    
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
+    text-align: center;
+    flex-wrap: wrap;
+    
+}
+
+
+.fecha{
+    flex: 1;
+    min-width: 100px;
+}
+.nombre{
+    flex: 1;
+    min-width: 100px;
+}
+.correo{
+    flex: 1;
+    min-width: 100px;
+}
+.telefono{
+    flex: 1;
+    min-width: 100px;
+}
+.mensaje{
+    flex: 3;
+    min-width: 500px;
+}
+
+
+.titulo{
+    text-align: center;
+    margin-bottom: 2%;
+}

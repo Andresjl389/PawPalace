@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Cormorant+Garamond:wght@300&family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0; 
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    background: #C5E892;
+}
+
+.settings{
+    text-align: center;
+    font-size: 35px;
+    width: 80px;
+    
+}
+
+.settings:hover{
+    color: #be0000;
+    cursor: pointer;
+}
+.settings:active{
+    color: #8d0000;
+}
+
+.Title{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Autour One', serif;
+}
+
+.btn_search:hover{
+    color: #C5E892;
+    cursor: pointer;
+}
+
+
+.home_button{
+    background: transparent;
+    border: none;
+    position: center;
+    width: 85px;
+    display: flex;
+
+}
+
+.a_img{
+    margin-left: 20px;
+    margin-top: 10px;
+    z-index: 10;
+}
+
+img{
+    position: center;
+    width: 170px;
+    display: flex;
+
+}
+
+
+.div_settings{
+    display: none;
+}
+
+.container_div{
+    display: flex;
+    justify-content: end;
+}
+
+.div_settings.active{
+    padding: 2%;
+    display: flex;
+    background: #fff2fd;
+    align-items: center;
+    flex: 3;
+    width: 20vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    flex-direction: column;
+}
+
+.links{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+

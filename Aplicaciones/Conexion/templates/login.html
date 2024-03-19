@@ -1,0 +1,26 @@
+{% extends "layouts/baseAuth.html" %}
+{% load static %}
+{% block title %} Login {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+<body>
+    <div class="container">
+        <form class="form_container" method="POST">
+            {% csrf_token %}
+            {{ error }}
+
+            <p class="name">Email</p>
+            <input type="text" class="inputs" placeholder="userexample" required="" name="Username">
+            <p class="name">Contraseña</p>
+            <input type="password" class="inputs" placeholder="password" required="" name="Password">
+            <button type="submit" class="send" id="enviar"><i class="fa-solid fa-circle-plus icon"></i>Ingresar</button>
+            <a href="/recuperacion" class="forget">Has olvidado tu contraseña</a>
+        </form>
+    </div>
+</body>
+
+
+<script type="text/javascript" src="{% static 'js/principal' %}"></script>
+{% endblock %}

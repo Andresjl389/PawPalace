@@ -1,0 +1,25 @@
+
+/* Estilo para el contenedor de las imágenes y nombres */
+.image-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para cada elemento de la lista (imagen y nombre) */
+.image-item {
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Estilo para las imágenes */
+.image-item img {
+    max-width: 150px;
+    max-height: 150px;
+}

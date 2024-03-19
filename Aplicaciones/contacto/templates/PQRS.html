@@ -1,0 +1,36 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+
+{% block title %}PQRS{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/PQRS.css' %}" type="text/css">
+
+<div class="pqrs">
+
+    <h2 class="titulo">{{encontrados}}</h2>
+    <div class="container">
+
+        <div class="fecha"><p>Fecha</p></div><hr>
+        <div class="nombre"><p>Nombre</p></div><hr>
+        <div class="correo"><p>Correo</p></div><hr>
+        <div class="telefono"><p>Teléfono</p></div><hr>
+        <div class="mensaje"><p>Mensaje</p></div>
+
+    </div>
+
+    {% for queja in q%}
+    <div>
+        <div class="container">
+
+            <div class="fecha">{{queja.date}}</div><hr>
+            <div class="nombre">{{queja.name}}</div><hr>
+            <div class="correo">{{queja.email}}</div><hr>
+            <div class="telefono">{{queja.phone}}</div><hr>
+            <div class="mensaje">{{queja.message}}</div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

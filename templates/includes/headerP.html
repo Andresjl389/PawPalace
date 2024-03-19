@@ -1,0 +1,17 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/headerP.css' %}">
+
+<div class="header">
+    <div class="buttons">
+        <i class="fa-solid fa-arrow-left icons" id="back-icon"></i>
+        <i class="fa-solid fa-circle-info icons" id="info-icon"></i>
+    </div>
+    <div class="title">
+        <h1>{{titulo}}</h1>
+        <p class="title_text">{{texto}}</p>    
+    </div>
+</div>
+
+
+<script type = "text/javascript" src="{% static 'js/principal.js' %}"></script>

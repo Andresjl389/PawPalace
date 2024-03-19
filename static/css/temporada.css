@@ -1,0 +1,52 @@
+body{
+    background: #C5E892;
+}
+
+
+.buttons_conatiner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 100px;
+    
+}
+
+.botones{
+    flex: 1;
+    min-width: 100px;
+    height: 4vh;
+    border: none;
+    background: #e8f6d1;
+    border: 1px solid #466e1d;
+    color: #466e1d;
+    border-radius: 10px;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+}
+
+.botones:hover{
+    background: #b3df77;
+}
+
+.botones:active{
+    background: #95cf4c;
+}
+
+
+.pro_container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.info_conatiner{
+    display: flex;
+    flex: 1;
+    min-width: 300px;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    background: #e8f6d1;
+    border-radius: 20px;
+}

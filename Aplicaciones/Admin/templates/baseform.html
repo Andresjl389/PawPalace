@@ -1,0 +1,48 @@
+{% load static %}
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+/>
+<link rel="stylesheet" href="{% static 'css/indexstock.css' %}" />
+
+
+<form enctype="multipart/form-data" method="post">
+
+  {% csrf_token%}
+  {% for edit in creado %}
+    <div class="input-container ml-5 mr-5">
+      <p for="" class="form-label">{{edit.label}}</p>
+
+      {%if edit.field.widget.input_type == 'file' and edit.value%}
+      <br/>
+      <img src="{{MEDIA_URL}}/media/{{edit.value}}" width="100" alt="">
+
+      {%endif%}
+
+
+      <input
+        type="{{edit.field.widget.input_type}}"
+        class="form-control"
+        name="{{edit.name}}" 
+        id=""
+        aria-describedby=""
+        placeholder="{{edit.label}}"
+        value="{{ edit.value | default_if_none:'' }}"
+
+      />
+    </div>
+
+    <div class="col-12 help-text"> {{edit.errors}}</div>
+
+  {%endfor%}  
+  <input type="submit" name="" value="Enviar Informacion" class="btn btn-success">
+  <a class="btn btn-primary" href="{%url 'adm_recetas'%}">Cancelar</a>
+
+  
+</form>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+
+

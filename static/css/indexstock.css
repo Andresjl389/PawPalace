@@ -1,0 +1,46 @@
+
+body{
+    background-color: #C5E892;
+}
+
+
+.card{
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 200px;
+}
+.table{
+    margin-bottom: 50px;
+    
+   
+}  
+
+.table th{
+    
+    text-align: center; /* Centrar horizontalmente */
+    vertical-align: middle; /* Centrar verticalmente */
+}
+
+.table td{
+    
+    text-align: center; /* Centrar horizontalmente */
+    vertical-align: middle; /* Centrar verticalmente */
+}
+.table td img {
+    display: block; /* Asegura que la imagen sea un bloque y no un elemento en línea */
+    margin: auto; /* Establece márgenes automáticos para centrar horizontalmente */
+    vertical-align: middle; /* Centra verticalmente la imagen dentro de la celda */
+}
+.table td a {
+    display: inline-block; /* Convierte los enlaces en elementos en línea a elementos en bloque */
+    margin: 5px; /* Ajusta el margen entre los botones según sea necesario */
+}
+
+.btn{
+    margin-bottom: 50px;
+}
+
+
+@media only screen and (min-width: 500px) {
+
+}

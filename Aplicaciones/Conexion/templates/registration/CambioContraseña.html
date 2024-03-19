@@ -1,0 +1,28 @@
+{% extends "layouts/baseAuth.html" %}
+{% load static %}
+{% block title %} Login {% endblock %}
+
+{% block content %}
+
+{% if validlink %}
+
+<h1>Nueva Contraseña</h1>
+
+<form method="post">
+    {% csrf_token %}
+
+    <p class="name">Nueva contraseña</p>
+            <input type="password" class="inputs" placeholder="youremailhere@mail.com" required="" name="Username">
+    <p class="name">Nueva Contraseña</p>
+            <input type="password" class="inputs" placeholder="password" required="" name="Password">
+    <input type = "submit" value = "Cambiar mi contraseña"/>
+</form>
+
+
+{% else %}
+
+<h1>ENLACE INVALIDO: ESTE ENLACE YA HA SIDO ACTUALIZADO</h1>
+
+{% endif %}
+
+{%  endblock %}

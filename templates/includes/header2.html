@@ -1,0 +1,58 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/2header.css' %}">
+
+<header class="header">
+    <div class="button_home_container">
+        <button type="button" class="home_button">
+            {% if user.is_superuser %}
+                <a href="{% url 'perfil_administrativo' %}" class=""><img src="{% static 'img/logolocalfood.png' %}"></a>
+            {% else %}
+                <a href="{% url 'inicio' %}" class=""><img src="{% static 'img/logolocalfood.png' %}"></a>
+            {% endif %} 
+        </button>
+    </div>
+
+    <div class="Title">
+        <h1>{{ titulo }}</h1>
+    </div>
+
+    <div class="settings">
+        <i class="fa-solid fa-gear" id="settings"></i>
+    </div>
+
+</header>
+<div class="container_div">
+    <div class="div_settings">
+        <h2>Pestañas</h2>
+        <div class="links">
+            <ul>
+
+                {% if user.is_superuser %}
+                <li><a href="{% url 'perfil_administrativo' %}">Inicio</a></li>
+                <li class="list_li"><a href="{% url 'libros' %}">Suscripción</a></li>
+                <li class="list_li"><a href="/adm_recetas">Gestión Recetas</a></li>
+                {% else %}
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                <li><a href="/suscripcion">Suscripción</a></li>
+                {% endif %}
+
+                <li><a href="{% url 'productos' %}">Temporada</a></li>
+                <li><a href="#">Educación</a></li>
+                <li><a href="/comunidad">Comunidad</a></li>
+            </ul>
+        </div>
+
+        <h2>Configuraciones</h2>
+        <div class="links">
+            <ul>
+                {% if user.is_authenticated %}
+                <li><a href="/logout">Logout</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script src="{% static 'js/settings.js' %}" type="text/javascript"></script>

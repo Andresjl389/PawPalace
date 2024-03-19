@@ -1,0 +1,21 @@
+{% extends "layouts/baseAuth.html" %}
+{% load static %}
+{% block title %} Login {% endblock %}
+
+{% block content %}
+
+<body>
+    <div class="container">
+        <form class="form_container" method="POST">
+            {% csrf_token %}
+            {{satisfactorio}}
+            {{error}}
+
+            <h1>Recuperacion de contraseña</h1>
+            <p>Correo: <input type="email" placeholder="youremailhere@mail.com" required="" name="email"></p>
+            <button type="submit"><i class="fa-solid fa-circle-plus icon"></i>Enviar</button>
+        </form>
+    </div>
+</body>
+
+{% endblock %}

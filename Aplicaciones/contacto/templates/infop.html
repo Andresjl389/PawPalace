@@ -1,0 +1,30 @@
+{% extends "layouts/baseAuth.html" %}
+{% load static %}
+{% block title %}Info{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/info.css' %}">
+
+    <body>
+        <div class="container">
+                <form method="POST" class="form">
+                    {% csrf_token %}
+
+                    <div class="div_p">
+                        <p class="name">Nombre</p>
+                        <input type="text" name="name" placeholder="Nombre" required class="input_info">
+                        <p class="name">Correo electrónico</p>
+                        <input type="email" name="email" placeholder="Correo electrónico" required class="input_info">
+                        <p class="name">Teléfono</p>
+                        <input type="number" name="phone" placeholder="Teléfono" required class="input_info">
+                        <p class="name">Mensaje</p>
+                        <textarea class="area" placeholder="Escribe tu pregunta aquí" name="message" type="text" required></textarea>
+                        <button type="submit" class="button"><i class="fa-solid fa-up-right-from-square"></i>Enviar</button>
+                    </div>  
+            </form>
+        </div>
+    </body>
+
+
+{% endblock %}

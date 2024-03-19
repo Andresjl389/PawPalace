@@ -1,0 +1,30 @@
+{% extends "layouts/base2.html" %}
+
+{% load static %}
+
+{% block title %}Productos de temporada{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/temporada.css' %}">
+
+   <body>
+
+      <div class="buttons_conatiner">
+        {% for mes in meses %}
+        <a href="{% url 'meses' mes %}" ><button class="botones">{{ mes }}</button></a>
+         {% endfor %}
+      </div>
+
+      <div class="pro_container">
+         {% for p in obj %}
+            <div class="info_conatiner">
+               <img src="{{p.imageproducto.url}}" alt="">
+               <p>{{p.nombreproducto}}</p>
+               <p >{{p.Descripcion}}</p>
+            </div>
+         {% endfor %}
+      </div>
+   </body>
+{% endblock %}
+

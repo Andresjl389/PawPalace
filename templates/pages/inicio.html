@@ -1,0 +1,77 @@
+{% extends "layouts/base.html" %}
+{% load tz %}
+{% load static %}
+
+
+{% block title %}LocalFood{% endblock %}
+
+{% block content %}
+
+
+<article class="article">
+
+    <div class="options_container">
+        
+
+    </div>
+        <div class="info_container_container">
+            <div class="info">
+            </div>
+            <div class="info_container">
+                <h1>Title</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident ea labore, nisi magnam, vel tempore accusamus autem consectetur alias voluptatem aut rerum a esse rem omnis pariatur deserunt harum commodi.</p>
+            </div>
+            <div class="info">
+            </div>
+            <div class="info_container">
+                <h1>Title</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident ea labore, nisi magnam, vel tempore accusamus autem consectetur alias voluptatem aut rerum a esse rem omnis pariatur deserunt harum commodi.</p>
+            </div>
+            <div class="info">
+            </div>
+            <div class="info_container">
+                <h1>Title</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident ea labore, nisi magnam, vel tempore accusamus autem consectetur alias voluptatem aut rerum a esse rem omnis pariatur deserunt harum commodi.</p>
+            </div>
+        </div>
+    <div class="user">
+        <div class="container_img_container">
+            <div class="img_container"><i class="fa-solid fa-user"></i></div>
+        </div>
+        <div class="user_info">
+            {% if user.is_authenticated%}
+            <p>{{user.username}}</p>
+            <p>{{user.email}}</p>
+            <p>{{user.last_login|timezone:"America/Bogota"}}</p>
+            {% endif %}
+        </div>
+        <div class="settings">
+            <i class="fa-solid fa-gear" id="settings"></i>
+        </div>
+
+        <div class="container_div">
+            <div class="div_settings">
+                <h2>Pestañas</h2>
+                <div class="links">
+                <h2>Configuraciones</h2>
+                <div class="links">
+                    <ul>
+                        {% if user.is_authenticated %}
+                        <li><a href="/logout">Logout</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+<script type = "text/javascript" src="{% static 'js/inicio.js' %}"></script>
+<script type = "text/javascript" src="{% static 'js/settings.js' %}"></script>
+
+
+
+{% endblock %}
+
+{% block style %} 
+    <link type="text/css" href="{% static 'css/inicio.css' %}" rel="stylesheet">
+{% endblock %}
