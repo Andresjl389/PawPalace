@@ -1,28 +1,136 @@
-.footer{
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+footer{
+    font-family: "Inter", sans-serif;
+    background: #FCEED5;
     display: flex;
+    padding-top: 30px;
     justify-content: center;
     align-items: center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
     flex-direction: column;
-    padding: 10px;
-    background: #b9eb74;
-    height: 25vh;
     
 }
 
-.footer_names {
+.CardBlue{
     display: flex;
-    flex: 1;
-    width: 100%;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    max-width: 700px;
     align-items: center;
-    height: 100%; /* Asegura que .footer_names ocupe el 100% de la altura disponible */
+    background: #003459;
+    color: #FDFDFD;
+    width: 70vw;
+    border-radius: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
-.names_li{
-    display: flex;
-    text-decoration: none;
-    margin: 5px;
+p{
+    flex: 1;
+    font-size: 24px;
+}
 
+.CardWhite{
+    flex-wrap: wrap;
+    flex: 2;
+    background: #FFFFFF;
+    display: flex;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.emailInput{
+    width: 70%;
+    height: 7vh;
+    resize: none;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #99A2A5;
+}
+.buttonCards{
+    flex: 1;
+    background: #003459;
+    color: #FDFDFD;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+.buttonCards:hover{
+    background: #002A48;
+    color: #FDFDFD;
+}
+.buttonCards:active{
+    background: #00528C;
+    color: #FDFDFD;
+}
+
+.info{
+    margin-top: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list{
+    display: flex;
+}
+
+.items{
+    display: flex;
+    padding: 10px;
+    color: #252525;
+    text-decoration: none;
+}
+
+a:link{
+    color: #252525;
+}
+
+a:visited{
+    color: #252525;
+}
+
+.fa-brands{
+    font-size: 20px;
+    color: #252525;
+}
+
+
+.Logoimg{
+    width: 130px;
+}
+
+.copyrightContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #99A2A5;
+    padding: 30px;
+    width: 100%;
+
+}
+
+.container_copyright_p{
+    display: flex;
+    justify-content: end;
+    flex: 1;
+    text-align: end;
+}
+
+.copyright_p{
+    font-size: 14px;
+}
+
+.copyright_p:nth-child(3){
+    display: inline;
+    
+}
+.copyright_p:nth-child(4){
+    display: inline;
+}
+
+a{
+    text-decoration: none;
 }
