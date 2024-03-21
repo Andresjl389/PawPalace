@@ -14,10 +14,11 @@
 
 .icons{
     cursor: pointer;
+    color: #003459;
 }
 .icons:hover{
-    color: #b10f0f;
+    color: #003459;
 }
 .icons:active{
-    color: #770b0b;
+    color: #003459;
 }

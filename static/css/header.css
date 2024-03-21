@@ -43,22 +43,50 @@
 }
 
 .cardnav ul li a{
+    font-weight: bold;
+    color: #003459;
     text-decoration: none;
 }
 
-.nav_conatiner {
-    display: flex; /* Organizar los elementos internos horizontalmente */
-    align-items: center; /* Centrar verticalmente los elementos */
+.search-form {
+    display: flex;
+}
+
+.input-container {
+    position: relative;
 }
 
 .input_nav_bar {
-    /* Estilos para el campo de búsqueda */
-    /* Puedes añadir tus propios estilos aquí */
+    padding: 13px; 
+    background-color: #fff; 
+    color: #003459; 
+    text-decoration: none;
+    border: none;
+    border-radius: 30px; 
+    cursor: pointer; 
+
 }
 
 .btn_search {
-    /* Estilos para el botón de búsqueda */
-    /* Puedes añadir tus propios estilos aquí */
+    position: absolute;
+    /* right: 5px; 
+    top: 50%;
+    transform: translateY(-50%); */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+form ~ a {
+    display: inline-block;
+    padding: 10px 20px; 
+    background-color: #003459; 
+    color: #003459; 
+    text-decoration: none;
+    border: none;
+    border-radius: 30px; 
+    cursor: pointer; 
 }
 
 
