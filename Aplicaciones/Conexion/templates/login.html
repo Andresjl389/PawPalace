@@ -7,21 +7,29 @@
 <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
 <body>
     <div class="container">
+        <h1>Inicie Sesion</h1>
         <form class="form_container" method="POST">
             {% csrf_token %}
             {{ error }}
-
-            <p class="name">Email</p>
-            <input type="text" class="inputs" placeholder="userexample" required="" name="Username">
+            <p class="name">Usuario</p>
+            <input type="text" class="inputs" placeholder="PawPets" required="" name="Username">
             <p class="name">Contraseña</p>
             <input type="password" class="inputs" placeholder="password" required="" name="Password">
-            <button type="submit" class="send" id="enviar"><i class="fa-solid fa-circle-plus icon"></i>Ingresar</button>
-            <a href="/recuperacion" class="forget">Has olvidado tu contraseña</a>
+            <div class="centrarboton">
+                <button type="submit" class="send" id="enviar"><i class="btnlg"></i>Ingresar</button>
+            </div>
+            <a href="/recuperacion" class="forget">¿Has olvidado tu contraseña?</a>
         </form>
+        <a href="{% url 'signin' %}">
+            <!-- <button type="" class="btnSg" id="enviar">
+                Registrate
+            </button>
+        </a> -->
         <div class="decoration">
             <div class="rombo"></div>
             <div class="rombo2"></div>
         </div>
+        <img class="dogsdecoration" src="{% static 'img/Pets.png' %}" alt="Pets">
     </div>
 </body>
 

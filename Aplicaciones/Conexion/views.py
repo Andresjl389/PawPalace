@@ -52,8 +52,8 @@ def login_view(request):
     texto = "texto dinámico"
     
     if request.method == "GET":
-        return render(request, "login.html",{'titulo': 'Bienvenido de nuevo',
-                                                'texto': 'Inicie sesión a continuación o cree una cuenta'})
+        return render(request, "login.html",{'titulo': '',
+                                                'texto': ''})
     
     else:
         # print(request.POST)
@@ -63,8 +63,8 @@ def login_view(request):
         user = authenticate(request, username=username_or_email, password=password)
         
         if user is None:
-            return render(request, "login.html", {'titulo': 'Bienvenido de nuevo',
-                                                  'texto': 'Inicie sesión a continuación o cree una cuenta',
+            return render(request, "login.html", {'titulo': '',
+                                                  'texto': '',
                                                   'error': 'Usuario o contraseña incorrectos'})
         
         else:

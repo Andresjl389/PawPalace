@@ -5,11 +5,17 @@ body {
     font-family: 'Aleo', serif;
 }
 
+h1{
+    position: absolute;
+    z-index: 10;
+    top: 50px;
+    color: #003459;
+}
 .container {
     display: flex;
     width: 500px;
     height: 600px;
-    background-color: #F7DBA7;
+    background-color: #FCEED5;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
@@ -27,7 +33,7 @@ body {
     width: 300px;
     height: 300px;
     border-radius: 25px;
-    background: #003459;
+    background: #F7DBA7;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -64,61 +70,65 @@ body {
     flex-direction: column;
     padding: 30px;
     margin: 50px;
-    justify-content: space-between;
-    /* align-items: center;
-    justify-content: center; */
-    /* height: 50vh; */
+    justify-content: space-between;   
     z-index: 1;
 }
 
 .form_container .name,
 .form_container .inputs,
-.form_container .send,
-.form_container .forget {
-    margin-bottom: 10px; 
+.form_container .send {
+    margin-bottom: 20px; 
 }
 
-.name{
-    width: 30%;
-}
-/*
 .inputs{
-    width: 30%;
-    height: 10%;
-    margin-bottom: 5vh;
+    width: 100%;
+    height: 30px;
     border: none;
     outline: none;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
-.inputs:focus{
-    transition: border-bottom 0.5s;
-    border-bottom: 3px solid #ee4bbd;
+.centrarboton{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
 }
 
-.send{
-    width: 20%;
-    height: 10%;
-    border-radius: 5px;
-    border: none;
-    background: #545F71;
-    color: #C5E892;
+button{
+    border-radius: 30px;
+    width: 100px;
+    height: 25px;
+    color: #ffff;
+    background-color: #003459;
     cursor: pointer;
-}
-.send:active{
-    background: #3d4450;
-    color: #94b463;
-}
-
-.send:hover{
-    transition: 1s scale;
-    scale: 1.1;
-}
-
-.icon{
-    margin-right: 10px;
 }
 
 .forget{
-    margin-top: 20px;
-} */
+    text-decoration: none;
+    color: #003459;
+    cursor: pointer;
+         
+}
+
+form ~ a{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.btnSg{
+    margin-top: 230px;
+    z-index: 20;
+    
+}
+.dogsdecoration{
+    position: absolute;
+    width: 500px;
+    height: 30%;    
+    z-index: 1;
+    bottom: 0;
+}
+
