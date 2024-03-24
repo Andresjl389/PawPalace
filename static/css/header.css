@@ -4,6 +4,7 @@ header{
     padding: 0;
     margin: 0;
     font-family: 'Aleo', serif;
+    z-index: 10;
     
   }
 
@@ -11,7 +12,13 @@ header{
     display: flex;
     align-content: center;
     padding: 15px;
-    background: rgba(255, 255, 255, 1);
+    background: #ffffff;
+}
+.header2{
+    display: flex;
+    align-content: center;
+    padding: 15px;
+    background: #FCEED5;
 }
 
 
@@ -54,10 +61,13 @@ header{
 
 .input-container {
     position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
 .input_nav_bar {
-    padding: 13px; 
+    padding: 10px 10px 10px 25px;
     background-color: #fff; 
     color: #003459; 
     text-decoration: none;
