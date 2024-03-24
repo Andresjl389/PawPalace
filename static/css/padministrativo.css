@@ -1,19 +1,17 @@
-body{
-    background: #C5E892;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 .all{
-    height: 60vh;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 4vh;
     flex-wrap: wrap;
-    min-width: 700px;
+    min-width: 600px;
     align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Inter', sans-serif;
 }
 
 .div_cards{
-    background: #e8f6d1;
+    background: #002A48;
     width: 20vw;
     height: 30vh;
     display: flex;
@@ -21,16 +19,15 @@ body{
     justify-content: center;
     text-align: center;
     border-radius: 20px;
-}
-
-.fa-utensils, .fa-comment{
-    font-size: 5em;
+    min-width: 300px;
 }
 
 .a_cards{
     display: flex;
     height: 30vh;
     text-decoration: none;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
 }
 
 .a_cards:hover{
@@ -39,8 +36,8 @@ body{
 }
 
 .a_cards:link{
-    color: #252525;
+    color: #FFFFFF;
 }
 .a_cards:visited{
-    color: #252525;
+    color: #FFFFFF;
 }

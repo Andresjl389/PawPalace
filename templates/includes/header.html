@@ -4,6 +4,29 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
+
+{% if user.is_superuser %}
+
+<header class="header2">
+    <nav class="cardnav">
+        <a class="logo"><img src="{% static 'img/PawPalaceLogo.png' %}" alt="Logo"></a>
+        <ul class="links">
+        <li><a href="">Home</a></li>
+        <li><a href="">Category</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+        </ul>
+        <form class="search-form" action="/search" method="get">
+            <div class="input-container">
+                <button type="submit" class="btn_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" class="input_nav_bar" name="q" placeholder="Search Something Here!! ">
+            </div>
+        </form>
+        <a class="" href="{% url 'inicio' %}">Join the Community</a>
+    </nav>
+</header>
+
+{% else %}
 <header class="header">
     <nav class="cardnav">
         <a class="logo"><img src="{% static 'img/PawPalaceLogo.png' %}" alt="Logo"></a>
@@ -22,4 +45,7 @@
         <a class="" href="{% url 'inicio' %}">Join the Community</a>
     </nav>
 </header>
+
+{% endif %}
+
 <script src="{% static 'js/inicio.js' %}" type="text/javascript"></script>

@@ -3,75 +3,81 @@
 {% load static %}
 
 
-{% block title %}LocalFood{% endblock %}
+{% block title %}PawPalace{% endblock %}
 
 {% block content %}
 
-
-<article class="article">
-
-    <div class="options_container">
-        
-
-    </div>
-        <div class="info_container_container">
-            <div class="info">
-            </div>
-            <div class="info_container">
-                <h1>Title</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident ea labore, nisi magnam, vel tempore accusamus autem consectetur alias voluptatem aut rerum a esse rem omnis pariatur deserunt harum commodi.</p>
-            </div>
-            <div class="info">
-            </div>
-            <div class="info_container">
-                <h1>Title</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident ea labore, nisi magnam, vel tempore accusamus autem consectetur alias voluptatem aut rerum a esse rem omnis pariatur deserunt harum commodi.</p>
-            </div>
-            <div class="info">
-            </div>
-            <div class="info_container">
-                <h1>Title</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident ea labore, nisi magnam, vel tempore accusamus autem consectetur alias voluptatem aut rerum a esse rem omnis pariatur deserunt harum commodi.</p>
-            </div>
-        </div>
-    <div class="user">
-        <div class="container_img_container">
-            <div class="img_container"><i class="fa-solid fa-user"></i></div>
-        </div>
-        <div class="user_info">
-            {% if user.is_authenticated%}
-            <p>{{user.username}}</p>
-            <p>{{user.email}}</p>
-            <p>{{user.last_login|timezone:"America/Bogota"}}</p>
-            {% endif %}
-        </div>
-        <div class="settings">
-            <i class="fa-solid fa-gear" id="settings"></i>
+<section class="bannerContainer">
+    <div class="bannerDiv">
+        <div class="image">
+            <img src="{% static 'img/pets.png' %}" alt="">
         </div>
 
-        <div class="container_div">
-            <div class="div_settings">
-                <h2>Pestañas</h2>
-                <div class="links">
-                <h2>Configuraciones</h2>
-                <div class="links">
-                    <ul>
-                        {% if user.is_authenticated %}
-                        <li><a href="/logout">Logout</a></li>
-                        {% endif %}
-                    </ul>
-                </div>
-            </div>
+        <div class="shopText">
+            <h2>Encuentra Miles De Productos</h2>
+            <h3>Productos Para Tu Mascota</h3>
+            <p class="p_Text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ullam, quod consequatur pariatur
+                veritatis voluptas nulla quae iure eveniet provident impedit qui repellat ea blanditiis delectus consectetur
+                facere necessitatibus sit!</p>
         </div>
     </div>
-</article>
-<script type = "text/javascript" src="{% static 'js/inicio.js' %}"></script>
-<script type = "text/javascript" src="{% static 'js/settings.js' %}"></script>
+</section>
 
+<section class="main">
+    <aside class="filter">
+        <h2 class="titleFilter">Filter</h2>
+        <div class="Gender">
+            <p class="subtitleFilter">Gender</p>
+            <p><input type="checkbox" class="i_check">Male</p>
+            <p><input type="checkbox" class="i_check">Female</p>
+        </div>
 
+        <div class="Color">
+            <p class="subtitleFilter">Color</p>
+            <p><input type="checkbox" class="i_check">Black</p>
+            <p><input type="checkbox" class="i_check">Red</p>
+            <p><input type="checkbox" class="i_check">Silver</p>
+            <p><input type="checkbox" class="i_check">Apricot</p>
+        </div>
+    </aside>
+
+    <div class="products">
+        <div class="textProducts">
+            <h2 class="titleProducts">Products</h2>
+            <p class="numProduct">12 productos</p>
+        </div>
+
+        <div class="infoProduct">
+            <div class="item">
+                <img src="{% static 'img/Dog.png' %}" alt="" class="imgProduct">
+                <h3>nombre producto</h3>
+                <p>filtros del producto</p>
+                <p>precio del producto</p>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/Dog.png' %}" alt="" class="imgProduct">
+                <h3>nombre producto</h3>
+                <p>filtros del producto</p>
+                <p>precio del producto</p>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/Dog.png' %}" alt="" class="imgProduct">
+                <h3>nombre producto</h3>
+                <p>filtros del producto</p>
+                <p>precio del producto</p>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/Dog.png' %}" alt="" class="imgProduct">
+                <h3>nombre producto</h3>
+                <p>filtros del producto</p>
+                <p>precio del producto</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %}
 
-{% block style %} 
-    <link type="text/css" href="{% static 'css/inicio.css' %}" rel="stylesheet">
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/inicio.css' %}">
 {% endblock %}
