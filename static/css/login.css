@@ -127,7 +127,7 @@ form ~ a{
 .dogsdecoration{
     position: absolute;
     width: 500px;
-    height: 30%;    
+    height: 35%;    
     z-index: 1;
     bottom: 0;
 }
