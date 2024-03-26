@@ -8,6 +8,7 @@
 
 <body>
     <div class="container">
+        <h1>Registrese</h1>
         <form class="form_container"  method="POST">
             {% csrf_token %}
             <h3 class="title_error">
@@ -19,10 +20,18 @@
             <input type="email" class="inputs" placeholder="youremailhere@mail.com" required="" name="email">
             <p class="name">Contraseña</p>
             <input type="password" class="inputs" placeholder="password" required="" name="password1">
-            <p class="name">Confirmar contraseña</p>
+            <p class="name2">Confirmar Contraseña</p>
             <input type="password" class="inputs" placeholder="confirm password" required="" name="password2">
-            <button type="submit" class="send" id="registro"><i class="fa-solid fa-circle-plus icon"></i>Ingresar</button>
+            <div class="centrarboton">
+                <button type="submit" class="send" id="registro"><i ></i>Ingresar</button>
+            </div>
+            
         </form>
+        <div class="decoration">
+            <div class="rombo"></div>
+            <div class="rombo2"></div>
+        </div>
+        <img class="dogsdecoration" src="{% static 'img/Pets.png' %}" alt="Pets">
     </div>
 </body>
 

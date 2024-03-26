@@ -1,7 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
-body{
-    background: #C5E892;
-    font-family: 'Roboto Condensed', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+body {
+    background: rgba(255, 255, 255, 1);
+    font-family: 'Aleo', serif;
+}
+h1{
+    position: absolute;
+    z-index: 10;
+    top: 50px;
+    color: #003459;
+    margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    width: 500px;
+    height: 600px;
+    background-color: #FCEED5;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    align-items: center;
+    justify-content: center;
 }
 
 .title_error{
@@ -9,41 +31,92 @@ body{
 }
 
 .form_container{
+    font-size:medium;
+    position: absolute;
     display: flex;
-    margin: 10px;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 60vh;
+    padding: 30px;
+    margin: 50px;
+    justify-content: space-between;   
+    z-index: 10;
+}
+
+.form_container .name,
+.form_container .name2,
+.form_container .inputs,
+.form_container .send {
+    margin-bottom: 10px; 
+}
+
+.form_container .name2{
+    display: inline-block;
 }
 
 .name{
-    width: 30%;
+    width: 40%;
+}
+
+.rombo {
+    position: relative;
+    left: 170px;
+    top: -150px;
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+    background: #F7DBA7;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.rombo2{
+    position: relative;
+    left: -200px;
+    bottom: -150px;
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+    background: #003459;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 1;
 }
 
 .inputs{
-    width: 30%;
-    height: 10%;
-    margin-bottom: 3vh;
+    width: 100%;
+    height: 30px;
     border: none;
     outline: none;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+
+.centrarboton{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
 }
 
 .inputs:focus{
     transition: border-bottom 0.5s;
-    border-bottom: 3px solid #ee4bbd;
+    border-bottom: 1px solid #3d4450;
 }
 
-.send{
-    width: 20%;
-    height: 10%;
-    border-radius: 5px;
-    border: none;
-    background: #545F71;
-    color: #C5E892;
+button{
+    border-radius: 30px;
+    width: 100px;
+    height: 25px;
+    color: #ffff;
+    background-color: #003459;
     cursor: pointer;
+    z-index: 50;
 }
+
 .send:active{
     background: #3d4450;
     color: #94b463;
@@ -54,6 +127,11 @@ body{
     scale: 1.1;
 }
 
-.icon{
-    margin-right: 10px;
+.dogsdecoration{
+    position: absolute;
+    width: 500px;
+    height: 35%;    
+    z-index: 1;
+    bottom: 0;
 }
+

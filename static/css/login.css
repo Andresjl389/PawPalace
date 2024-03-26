@@ -121,9 +121,9 @@ form ~ a{
 
 .btnSg{
     margin-top: 230px;
-    z-index: 20;
-    
+    z-index: 20; 
 }
+
 .dogsdecoration{
     position: absolute;
     width: 500px;

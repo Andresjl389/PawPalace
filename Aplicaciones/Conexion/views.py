@@ -14,7 +14,7 @@ def signin(request):
     
     if request.method == 'GET':
         print("Enviando formulario")
-        return render(request, "signin.html",{'titulo': 'Crear cuenta',
+        return render(request, "signin.html",{'titulo': '',
                                                 'texto': "introduce los datos de tu cuenta o inicia sesión"})
     else:
         if request.POST['password1'] == request.POST['password2']:
@@ -33,12 +33,12 @@ def signin(request):
                 login(request, user)
                 return redirect('inicio')
             except ValidationError as e:
-                return render(request, "signin.html",{'titulo': 'Crear cuenta',
-                                                'texto': "introduce los datos de tu cuenta o inicia sesión",
+                return render(request, "signin.html",{'titulo': '',
+                                                'texto': "",
                                                 'error': 'El usuario ya existe',
                                                 'error': e.messages})
-        return render(request, "signin.html",{'titulo': 'Crear cuenta',
-                                                'texto': "introduce los datos de tu cuenta o inicia sesión",
+        return render(request, "signin.html",{'titulo': '',
+                                                'texto': "",
                                                 'error': 'Las contraseñas no coinciden'})    
     
     
